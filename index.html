@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>Final Tutorial</title>
+<title>Final Tutorial-2</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13077,88 +13077,111 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a href="https://github.com/jwaxman11/DataScienceProject">chloeuhls.github.io</a></p>
+<p><a href="https://chloeu99.github.io/">chloeuhls.github.io</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Data Science Final Tutorial
+Jacob Waxman and Chloe Uhls</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Analysis-Of-Homelessness-In-The-United-States">Analysis Of Homelessness In The United States<a class="anchor-link" href="#Analysis-Of-Homelessness-In-The-United-States">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For our final tutorial we will be analyzing homelessness in the United States. We are diving into the current state of homelessness, the change over time, and factors that have the biggest impact on homelessness. Observations that we will be looking for include total homeless population, homelessness per capita, and homeless population demographics. Furthermore, we aim to find trends in our data with variables correlating to our observations. These factors will include geographic location, local politics, and minimum wage.</p>
+<p>We will divide our project into 3 parts.</p>
+<ol>
+<li><p>National Level - Analyzing Homelessness Over Time</p>
+</li>
+<li><p>Regionally - Highlighting New Orleans and Other Cities and States</p>
+</li>
+<li><p>Impact Of Covid-19 - The Before And After Impact of the Pandemic</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Collaboration-Plan">Collaboration Plan<a class="anchor-link" href="#Collaboration-Plan">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Chloe and I will be meeting roughly twice a week to work on our project. We will meet virtually via Zoom and in person depending on the week. We will use a Github repository (<a href="https://github.com/chloeu99/chloeu99.github.io">https://github.com/chloeu99/chloeu99.github.io</a>) to collaborate and save our coding progress. We will use (are currently using) Google Docs for written reports throughout the semester, then we’ll upload it to github to make sure it’s all stored together. 
+In terms of coding, we will use the same strategies that we learned in class: Python coding and data scraping and the pandas library for analysis.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Datasets-Used">Datasets Used<a class="anchor-link" href="#Datasets-Used">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>2007-2020 PIT Estimates by State from HUD exchange.                                                         </li>
+</ol>
+<p>Link: <a href="https://www.huduser.gov/portal/sites/default/files/xls/2007-2020-PIT-Estimates-by-state.xlsx">https://www.huduser.gov/portal/sites/default/files/xls/2007-2020-PIT-Estimates-by-state.xlsx</a></p>
+<p>This data was really exciting to find. It includes the most recent homelessness(2020 status) and the change over time since 2007. The spreadsheet includes specific categories including total homelessness by state, breakdowns by gender and race, and status of homeless citizens (sheltered, unsheltered, etc). One question to analyze: which gender has a higher population of homelessness in Illinois?</p>
+<ol>
+<li>Downloaded Homelessness by Race, Homelessness by Gender, National Trends by Subpopulation CSV Files.</li>
+</ol>
+<p>Link: <a href="https://endhomelessness.org/homelessness-in-america/homelessness-statistics/state-of-homelessness-2021/">https://endhomelessness.org/homelessness-in-america/homelessness-statistics/state-of-homelessness-2021/</a>
+The data sources listed on this website are particularly interesting because they give the factors that go into homelessness, which aims to help us understand how we can solve it. When looking at homelessness by race I noticed that White people had the highest amount of homeless people, but when you switch it to rate per 10,000 people, the category Pacific Islanders switches to the top. This goes back to in class when we talked about the importance of weighted averages. We can analyze how the history of the United States goes into the factors of who experiences homelessness in this country.</p>
+<ol>
+<li>Homelessness by Population CSV File. </li>
+</ol>
+<p>Link: <a href="https://datalab.usaspending.gov/homelessness-analysis/">https://datalab.usaspending.gov/homelessness-analysis/</a></p>
+<p>This is the data we will be importing below.</p>
+<p>This data is interesting because it includes different columns that describes different factors that are attributed with homelessness such as age and whether or not they are in a family. The data set lists multiple cities per state to give a better understanding of homelessness in different areas of each state. Each state has two cities as observations depending on its population density.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">LINK TO PROJECT: https://github.com/jwaxman11/DataScienceProject</span>
-
-<span class="sd">Data Science Project Milestone 1 </span>
-
-<span class="sd">Group: Jacob Waxman and Chloe Uhls</span>
-
-<span class="sd">Project:</span>
-<span class="sd">Together we will be analyzing homelessness in the United States. We will look on a national level to see what factors have the biggest impacts on homelessess. We will break down the country by cities and states and analyze key points including regional temperature, minimum wage, state’s political-leaning, etc. We will also look at the effects of the pandemic and how it has changed homelessess in the US.</span>
-
-<span class="sd">Datasets: Include question(s) for each </span>
-
-<span class="sd">Downloaded 2007-2020 PIT Estimates by State from HUD exchange.</span>
-<span class="sd">Link: https://www.hudexchange.info/resource/3031/pit-and-hic-data-since-2007/</span>
-
-<span class="sd">This data was really exciting to find. It includes the most recent homelessness(2020 status) and the change over time since 2007. The spreadsheet includes specific categories including total homelessness by state, breakdowns by gender and race, and status of homeless citizens (sheltered, unsheltered, etc). One question to analyze: which gender has a higher population of homelessness in Illinois?</span>
-
-<span class="sd">Downloaded Homelessness by Race, Homelessness by Gender, National Trends by Subpopulation CSV Files.</span>
-<span class="sd">https://endhomelessness.org/homelessness-in-america/homelessness-statistics/state-of-homelessness-2021/</span>
-<span class="sd">The data sources listed on this website are particularly interesting because they give the factors that go into homelessness, which aims to help us understand how we can solve it. When looking at homelessness by race I noticed that White people had the highest amount of homeless people, but when you switch it to rate per 10,000 people, the category Pacific Islanders switches to the top. This goes back to in class when we talked about the importance of weighted averages. We can analyze how the history of the United States goes into the factors of who experiences homelessness in this country.</span>
-
-<span class="sd">Downloaded Homelessness by Population CSV File. </span>
-<span class="sd">Link: https://datalab.usaspending.gov/homelessness-analysis/ </span>
-
-<span class="sd">This is the data we will be importing below.</span>
-
-<span class="sd">This data is interesting because it includes different columns that describes different factors that are attributed with homelessness such as age and whether or not they are in a family. The data set lists multiple cities per state to give a better understanding of homelessness in different areas of each state. Each state has two cities as observations depending on its population density.</span>
-
-
-
-<span class="sd">Github: https://github.com/jwaxman11/DataScienceProject</span>
-
-<span class="sd">Collaboration Plan: </span>
-<span class="sd">Chloe and I will be meeting roughly twice a week to work on our project. We will meet virtually via Zoom and in person depending on the week. We will use a Github repository to collaborate and save our coding progress. We will use (are currently using) Google Docs for written reports throughout the semester, then we’ll upload it to github to make sure it’s all stored together. </span>
-<span class="sd">In terms of coding, we will use the same strategies that we learned in class: Python coding and data scraping and the pandas library for analysis.</span>
-
-
-<span class="sd">&quot;&quot;&quot;</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[4]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;\nData Science Project Milestone 1 \n\nGroup: Jacob Waxman and Chloe Uhls\n\nProject:\nTogether we will be analyzing homelessness in the United States. We will look on a national level to see what factors have the biggest impacts on homelessess. We will break down the country by cities and states and analyze key points including regional temperature, minimum wage, state’s political-leaning, etc. We will also look at the effects of the pandemic and how it has changed homelessess in the US.\n\nDatasets: Include question(s) for each \n\nDownloaded 2007-2020 PIT Estimates by State from HUD exchange.\nLink: https://www.hudexchange.info/resource/3031/pit-and-hic-data-since-2007/\n\nThis data was really exciting to find. It includes the most recent homelessness(2020 status) and the change over time since 2007. The spreadsheet includes specific categories including total homelessness by state, breakdowns by gender and race, and status of homeless citizens (sheltered, unsheltered, etc). One question to analyze: which gender has a higher population of homelessness in Illinois?\n\nDownloaded Homelessness by Race, Homelessness by Gender, National Trends by Subpopulation CSV Files.\nhttps://endhomelessness.org/homelessness-in-america/homelessness-statistics/state-of-homelessness-2021/\nThe data sources listed on this website are particularly interesting because they give the factors that go into homelessness, which aims to help us understand how we can solve it. When looking at homelessness by race I noticed that White people had the highest amount of homeless people, but when you switch it to rate per 10,000 people, the category Pacific Islanders switches to the top. This goes back to in class when we talked about the importance of weighted averages. We can analyze how the history of the United States goes into the factors of who experiences homelessness in this country.\n\nDownloaded Homelessness by Population CSV File. \nLink: https://datalab.usaspending.gov/homelessness-analysis/ \n\nThis data is interesting because it includes different columns that describes different factors that are attributed with homelessness such as age and whether or not they are in a family. The data set lists multiple cities per state to give a better understanding of homelessness in different areas of each state. Each state has two cities as observations depending on its population density.\n\n\n\nGithub: https://github.com/jwaxman11/DataScienceProject\n\nCollaboration Plan: \nChloe and I will be meeting roughly twice a week to work on our project. We will meet virtually via Zoom and in person depending on the week. We will use a Github repository to collaborate and save our coding progress. We will use (are currently using) Google Docs for written reports throughout the semester, then we’ll upload it to github to make sure it’s all stored together. \nIn terms of coding, we will use the same strategies that we learned in class: Python coding and data scraping and the pandas library for analysis.\n\n\n&#39;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">io</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="c1"># These two things are for Pandas, it widens the notebook and lets us display data easily.</span>
+<span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&lt;style&gt;.container { width:95% !important; }&lt;/style&gt;&quot;</span><span class="p">))</span>
 
 <span class="c1">#reading in dataset from https://datalab.usaspending.gov/homelessness-analysis/ </span>
 
@@ -13167,350 +13190,13 @@ div#notebook {
 <span class="sd">This data is from November 2019 and is categorized by a bunch of diffrent columns such as whether or not a person is sheltered, discussing age, whether or not they have a family, and whether or not they are verterans.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;User-Agent&#39;</span><span class="p">:</span> <span class="s1">&#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36&#39;</span><span class="p">}</span> 
+<span class="c1">#hud2020 = pd.read_excel(r, sheet_name = 1)</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://www.huduser.gov/portal/sites/default/files/xls/2007-2020-PIT-Estimates-by-state.xlsx&quot;</span>
 
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;panel_2_table_and_counts_v7_2020_03_27.csv&quot;</span><span class="p">)</span>
-<span class="n">df</span>
-</pre></div>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
 
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[8]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>coc_number</th>
-      <th>coc_name</th>
-      <th>sheltered_total_homeless_individuals</th>
-      <th>unsheltered_homeless_individuals</th>
-      <th>homeless_individuals</th>
-      <th>sheltered_total_homeless_people_in_families</th>
-      <th>unsheltered_homeless_people_in_families</th>
-      <th>homeless_people_in_families</th>
-      <th>sheltered_homeless</th>
-      <th>unsheltered_homeless</th>
-      <th>...</th>
-      <th>total_homeless_unaccompanied_youth_under_25</th>
-      <th>total_homeless</th>
-      <th>es_sh_th_avg_days</th>
-      <th>total_persons_returns_in_6_mths</th>
-      <th>total_persons_returns_in_12_mths_should_include_the_6_month_cohort</th>
-      <th>total_persons_returns_in_24_mths_should_include_both_the_6_and_12_month_cohort</th>
-      <th>percent_with_successful_es_th_sh_ph_rrh_exit</th>
-      <th>percent_with_successful_ph_retention_or_exit</th>
-      <th>amount</th>
-      <th>chronically_homeless</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>AK-500</td>
-      <td>Anchorage CoC</td>
-      <td>720.0</td>
-      <td>94.0</td>
-      <td>814.0</td>
-      <td>280.0</td>
-      <td>0.0</td>
-      <td>280.0</td>
-      <td>1000.0</td>
-      <td>94.0</td>
-      <td>...</td>
-      <td>97.0</td>
-      <td>1094.0</td>
-      <td>73.0</td>
-      <td>99.0</td>
-      <td>137.0</td>
-      <td>180.0</td>
-      <td>20%</td>
-      <td>95%</td>
-      <td>3112658.0</td>
-      <td>177</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>AK-501</td>
-      <td>Alaska Balance of State CoC</td>
-      <td>453.0</td>
-      <td>167.0</td>
-      <td>620.0</td>
-      <td>254.0</td>
-      <td>48.0</td>
-      <td>302.0</td>
-      <td>707.0</td>
-      <td>215.0</td>
-      <td>...</td>
-      <td>66.0</td>
-      <td>922.0</td>
-      <td>64.0</td>
-      <td>78.0</td>
-      <td>121.0</td>
-      <td>170.0</td>
-      <td>31%</td>
-      <td>94%</td>
-      <td>812671.0</td>
-      <td>180</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>AL-500</td>
-      <td>Birmingham/Jefferson, St. Clair, Shelby Counti...</td>
-      <td>501.0</td>
-      <td>219.0</td>
-      <td>720.0</td>
-      <td>181.0</td>
-      <td>0.0</td>
-      <td>181.0</td>
-      <td>682.0</td>
-      <td>219.0</td>
-      <td>...</td>
-      <td>26.0</td>
-      <td>901.0</td>
-      <td>70.0</td>
-      <td>169.0</td>
-      <td>220.0</td>
-      <td>275.0</td>
-      <td>19%</td>
-      <td>97%</td>
-      <td>9482514.0</td>
-      <td>119</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>AL-501</td>
-      <td>Mobile City &amp; County/Baldwin County CoC</td>
-      <td>183.0</td>
-      <td>216.0</td>
-      <td>399.0</td>
-      <td>135.0</td>
-      <td>17.0</td>
-      <td>152.0</td>
-      <td>318.0</td>
-      <td>233.0</td>
-      <td>...</td>
-      <td>16.0</td>
-      <td>551.0</td>
-      <td>57.0</td>
-      <td>35.0</td>
-      <td>55.0</td>
-      <td>91.0</td>
-      <td>26%</td>
-      <td>97%</td>
-      <td>3811801.0</td>
-      <td>59</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>AL-502</td>
-      <td>Florence/Northwest Alabama CoC</td>
-      <td>144.0</td>
-      <td>22.0</td>
-      <td>166.0</td>
-      <td>90.0</td>
-      <td>0.0</td>
-      <td>90.0</td>
-      <td>234.0</td>
-      <td>22.0</td>
-      <td>...</td>
-      <td>17.0</td>
-      <td>256.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>85%</td>
-      <td>43%</td>
-      <td>436218.0</td>
-      <td>136</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>394</th>
-      <td>WV-501</td>
-      <td>Huntington/Cabell, Wayne Counties CoC</td>
-      <td>128.0</td>
-      <td>21.0</td>
-      <td>149.0</td>
-      <td>41.0</td>
-      <td>0.0</td>
-      <td>41.0</td>
-      <td>169.0</td>
-      <td>21.0</td>
-      <td>...</td>
-      <td>11.0</td>
-      <td>190.0</td>
-      <td>45.0</td>
-      <td>86.0</td>
-      <td>122.0</td>
-      <td>169.0</td>
-      <td>27%</td>
-      <td>95%</td>
-      <td>NaN</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>395</th>
-      <td>WV-503</td>
-      <td>Charleston/Kanawha, Putnam, Boone, Clay Counti...</td>
-      <td>219.0</td>
-      <td>57.0</td>
-      <td>276.0</td>
-      <td>41.0</td>
-      <td>0.0</td>
-      <td>41.0</td>
-      <td>260.0</td>
-      <td>57.0</td>
-      <td>...</td>
-      <td>20.0</td>
-      <td>317.0</td>
-      <td>80.0</td>
-      <td>69.0</td>
-      <td>108.0</td>
-      <td>148.0</td>
-      <td>60%</td>
-      <td>95%</td>
-      <td>NaN</td>
-      <td>31</td>
-    </tr>
-    <tr>
-      <th>396</th>
-      <td>WV-508</td>
-      <td>West Virginia Balance of State CoC</td>
-      <td>422.0</td>
-      <td>91.0</td>
-      <td>513.0</td>
-      <td>111.0</td>
-      <td>4.0</td>
-      <td>115.0</td>
-      <td>533.0</td>
-      <td>95.0</td>
-      <td>...</td>
-      <td>24.0</td>
-      <td>628.0</td>
-      <td>72.0</td>
-      <td>221.0</td>
-      <td>298.0</td>
-      <td>390.0</td>
-      <td>40%</td>
-      <td>91%</td>
-      <td>NaN</td>
-      <td>96</td>
-    </tr>
-    <tr>
-      <th>397</th>
-      <td>WY-500</td>
-      <td>Wyoming Statewide CoC</td>
-      <td>299.0</td>
-      <td>135.0</td>
-      <td>434.0</td>
-      <td>141.0</td>
-      <td>64.0</td>
-      <td>205.0</td>
-      <td>440.0</td>
-      <td>199.0</td>
-      <td>...</td>
-      <td>82.0</td>
-      <td>639.0</td>
-      <td>62.0</td>
-      <td>107.0</td>
-      <td>143.0</td>
-      <td>195.0</td>
-      <td>33%</td>
-      <td>88%</td>
-      <td>NaN</td>
-      <td>46</td>
-    </tr>
-    <tr>
-      <th>398</th>
-      <td>MA-51X</td>
-      <td>MA-510 &amp; MA-516 Shared Jurisdiction</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-  </tbody>
-</table>
-<p>399 rows × 25 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1">#df = pd.read_csv(io.StringIO(x.decode(&#39;utf8&#39;)))</span>
 </pre></div>
 
     </div>
@@ -13526,40 +13212,46 @@ div#notebook {
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 399 entries, 0 to 398
-Data columns (total 25 columns):
- #   Column                                                                          Non-Null Count  Dtype  
----  ------                                                                          --------------  -----  
- 0   coc_number                                                                      399 non-null    object 
- 1   coc_name                                                                        399 non-null    object 
- 2   sheltered_total_homeless_individuals                                            398 non-null    float64
- 3   unsheltered_homeless_individuals                                                398 non-null    float64
- 4   homeless_individuals                                                            398 non-null    float64
- 5   sheltered_total_homeless_people_in_families                                     398 non-null    float64
- 6   unsheltered_homeless_people_in_families                                         398 non-null    float64
- 7   homeless_people_in_families                                                     398 non-null    float64
- 8   sheltered_homeless                                                              398 non-null    float64
- 9   unsheltered_homeless                                                            398 non-null    float64
- 10  sheltered_total_homeless_veterans                                               398 non-null    float64
- 11  unsheltered_homeless_veterans                                                   398 non-null    float64
- 12  homeless_veterans                                                               398 non-null    float64
- 13  sheltered_total_homeless_unaccompanied_youth_under_25                           398 non-null    float64
- 14  unsheltered_homeless_unaccompanied_youth_under_25                               398 non-null    float64
- 15  total_homeless_unaccompanied_youth_under_25                                     398 non-null    float64
- 16  total_homeless                                                                  398 non-null    float64
- 17  es_sh_th_avg_days                                                               387 non-null    float64
- 18  total_persons_returns_in_6_mths                                                 387 non-null    float64
- 19  total_persons_returns_in_12_mths_should_include_the_6_month_cohort              387 non-null    float64
- 20  total_persons_returns_in_24_mths_should_include_both_the_6_and_12_month_cohort  387 non-null    float64
- 21  percent_with_successful_es_th_sh_ph_rrh_exit                                    386 non-null    object 
- 22  percent_with_successful_ph_retention_or_exit                                    380 non-null    object 
- 23  amount                                                                          387 non-null    float64
- 24  chronically_homeless                                                            398 non-null    object 
-dtypes: float64(20), object(5)
-memory usage: 78.1+ KB
-</pre>
+
+<div class="output_html rendered_html output_subarea ">
+<style>.container { width:95% !important; }</style>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../HUD2020.csv&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-2-63e78c95c234&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>pd<span class="ansi-blue-fg">.</span>read_csv<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;../HUD2020.csv&#34;</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined</pre>
 </div>
 </div>
 
@@ -13572,7 +13264,7 @@ memory usage: 78.1+ KB
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
     </div>
