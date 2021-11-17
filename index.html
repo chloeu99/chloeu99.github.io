@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>Final Tutorial-2</title>
+<title>Final Tutorial-6</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13108,17 +13108,9 @@ Jacob Waxman and Chloe Uhls</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>For our final tutorial we will be analyzing homelessness in the United States. We are diving into the current state of homelessness, the change over time, and factors that have the biggest impact on homelessness. Observations that we will be looking for include total homeless population, homelessness per capita, and homeless population demographics. Furthermore, we aim to find trends in our data with variables correlating to our observations. These factors will include geographic location, local politics, and minimum wage.</p>
-<p>We will divide our project into 3 parts.</p>
-<ol>
-<li><p>National Level - Analyzing Homelessness Over Time</p>
-</li>
-<li><p>Regionally - Highlighting New Orleans and Other Cities and States</p>
-</li>
-<li><p>Impact Of Covid-19 - The Before And After Impact of the Pandemic</p>
-</li>
-</ol>
-
+<p>For our final tutorial we will be analyzing homelessness in the United States. We are diving into the current state of homelessness, the change over time, and factors that have the biggest impact on homelessness. Furthermore, we will break down our analysis on a national level and at the state level, highlighting the observations we find in Louisiana. Stats that we will be looking for include total homeless population, rate of homelessness, the population demographics. We will also look for variables correlating with the rate of homelessness at the state level. These factors will include geographic location, local politics, and minimum wage.</p>
+<p>We will divide our analysis into 3 parts.</p>
+<h4 id="1.-National-Observations---Analyzing-Key-Homeless-Statistics">1. National Observations - Analyzing Key Homeless Statistics<a class="anchor-link" href="#1.-National-Observations---Analyzing-Key-Homeless-Statistics">&#182;</a></h4><h4 id="2.-Regional-Impacts---Analyzing-On-A-State-By-State-Basis,-Highlighting-Louisiana,-And-Finding-Correlated-Variables">2. Regional Impacts - Analyzing On A State-By-State Basis, Highlighting Louisiana, And Finding Correlated Variables<a class="anchor-link" href="#2.-Regional-Impacts---Analyzing-On-A-State-By-State-Basis,-Highlighting-Louisiana,-And-Finding-Correlated-Variables">&#182;</a></h4><h4 id="3.-Future-Projections---Predicting-The-State-Of-Homelessness-in-2021-and-Beyond">3. Future Projections - Predicting The State Of Homelessness in 2021 and Beyond<a class="anchor-link" href="#3.-Future-Projections---Predicting-The-State-Of-Homelessness-in-2021-and-Beyond">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13132,8 +13124,7 @@ Jacob Waxman and Chloe Uhls</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Chloe and I will be meeting roughly twice a week to work on our project. We will meet virtually via Zoom and in person depending on the week. We will use a Github repository (<a href="https://github.com/chloeu99/chloeu99.github.io">https://github.com/chloeu99/chloeu99.github.io</a>) to collaborate and save our coding progress. We will use (are currently using) Google Docs for written reports throughout the semester, then we’ll upload it to github to make sure it’s all stored together. 
-In terms of coding, we will use the same strategies that we learned in class: Python coding and data scraping and the pandas library for analysis.</p>
+<p>Throughout the semester we will be meeting twice a week to work on our project. We will meet virtually via Zoom and in person depending on the week. We have a Github repository (<a href="https://github.com/chloeu99/chloeu99.github.io">https://github.com/chloeu99/chloeu99.github.io</a>) to collaborate and save our coding progress. We use Google Docs for written reports, then upload it to Github to keep everything organized. In terms of coding, we will use the same strategies that we learned in class: Python coding and data scraping and the pandas library for analysis.</p>
 
 </div>
 </div>
@@ -13148,29 +13139,32 @@ In terms of coding, we will use the same strategies that we learned in class: Py
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li>2007-2020 PIT Estimates by State from HUD exchange.                                                         </li>
-</ol>
-<p>Link: <a href="https://www.huduser.gov/portal/sites/default/files/xls/2007-2020-PIT-Estimates-by-state.xlsx">https://www.huduser.gov/portal/sites/default/files/xls/2007-2020-PIT-Estimates-by-state.xlsx</a></p>
-<p>This data was really exciting to find. It includes the most recent homelessness(2020 status) and the change over time since 2007. The spreadsheet includes specific categories including total homelessness by state, breakdowns by gender and race, and status of homeless citizens (sheltered, unsheltered, etc). One question to analyze: which gender has a higher population of homelessness in Illinois?</p>
-<ol>
-<li>Downloaded Homelessness by Race, Homelessness by Gender, National Trends by Subpopulation CSV Files.</li>
-</ol>
-<p>Link: <a href="https://endhomelessness.org/homelessness-in-america/homelessness-statistics/state-of-homelessness-2021/">https://endhomelessness.org/homelessness-in-america/homelessness-statistics/state-of-homelessness-2021/</a>
-The data sources listed on this website are particularly interesting because they give the factors that go into homelessness, which aims to help us understand how we can solve it. When looking at homelessness by race I noticed that White people had the highest amount of homeless people, but when you switch it to rate per 10,000 people, the category Pacific Islanders switches to the top. This goes back to in class when we talked about the importance of weighted averages. We can analyze how the history of the United States goes into the factors of who experiences homelessness in this country.</p>
-<ol>
-<li>Homelessness by Population CSV File. </li>
-</ol>
-<p>Link: <a href="https://datalab.usaspending.gov/homelessness-analysis/">https://datalab.usaspending.gov/homelessness-analysis/</a></p>
-<p>This is the data we will be importing below.</p>
-<p>This data is interesting because it includes different columns that describes different factors that are attributed with homelessness such as age and whether or not they are in a family. The data set lists multiple cities per state to give a better understanding of homelessness in different areas of each state. Each state has two cities as observations depending on its population density.</p>
+<h4 id="1.-2020-PIT-Estimates-by-State-from-HUD-exchange">1. 2020 PIT Estimates by State from HUD exchange<a class="anchor-link" href="#1.-2020-PIT-Estimates-by-State-from-HUD-exchange">&#182;</a></h4><p>Link: <a href="https://www.huduser.gov/portal/sites/default/files/xls/2007-2020-PIT-Estimates-by-state.xlsx">https://www.huduser.gov/portal/sites/default/files/xls/2007-2020-PIT-Estimates-by-state.xlsx</a></p>
+<p>This data was really exciting to find. The HUD does a great job posting their records on a yearly basis. We downloaded the excel sheet and uploaded it to our public Github. The spreadsheet breaks homelessness down into specific categories including total homelessness by state, demographics, and status of homeless citizens (sheltered, unsheltered, etc).</p>
+<p>Example Questions: How many people are homeless in Louisiana? Is one gender or one race more likely to be homeless on a national level?</p>
+<h4 id="2.-Minnimum-Wage-By-State-(2021)">2. Minnimum Wage By State (2021)<a class="anchor-link" href="#2.-Minnimum-Wage-By-State-(2021)">&#182;</a></h4><p>Link: <a href="https://minimumwage.com/in-your-state/">https://minimumwage.com/in-your-state/</a></p>
+<p>This data contains a table of each state and their minnimum wage. The federal minimum wage has been stagnent at $7.25 since 2009. Not all states have required a higher state-wide minimum wage, but we expect that those with their own regulations will have a lower homeless population.</p>
+<p>Example Questions: Is there a correlation between a state's minimum wage and homeless population?</p>
+<h4 id="3.-Electoral-College-Results-By-State-(1980-2020)">3. Electoral College Results By State (1980-2020)<a class="anchor-link" href="#3.-Electoral-College-Results-By-State-(1980-2020)">&#182;</a></h4><p>Link: <a href="https://en.wikipedia.org/wiki/List_of_United_States_presidential_election_results_by_state">https://en.wikipedia.org/wiki/List_of_United_States_presidential_election_results_by_state</a></p>
+<p>We went to Wikipedia to find the state-wide Electoral College results for Presidential Elections. We will be analyzing election results from 1980 to 2020, and will look to see if a state's political consciounce is correlated with its homeless population.</p>
+<p>Example Questions: Is there any correlation between a states politics and homeless population? How has national homeless changed as the presidency has changed?</p>
+<h4 id="4.-Average-Temperature-By-State-(2019)">4. Average Temperature By State (2019)<a class="anchor-link" href="#4.-Average-Temperature-By-State-(2019)">&#182;</a></h4><p>Link: <a href="https://worldpopulationreview.com/state-rankings/average-temperatures-by-state">https://worldpopulationreview.com/state-rankings/average-temperatures-by-state</a></p>
+<p>We are predicting that there is a higher homeless population in warmer states. This will be used as an ease-in analysis, something that we believe is fairly obvious. It will show our approach when working with the dataframe.</p>
+<p>Example question: Does the coldest state have the lowest homeless population?</p>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Data-Collection">Data Collection<a class="anchor-link" href="#Data-Collection">&#182;</a></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[188]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
@@ -13182,21 +13176,6 @@ The data sources listed on this website are particularly interesting because the
 <span class="c1"># These two things are for Pandas, it widens the notebook and lets us display data easily.</span>
 <span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
 <span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&lt;style&gt;.container { width:95% !important; }&lt;/style&gt;&quot;</span><span class="p">))</span>
-
-<span class="c1">#reading in dataset from https://datalab.usaspending.gov/homelessness-analysis/ </span>
-
-<span class="sd">&quot;&quot;&quot; We talked about this data in the above cell. People experiencing homelessness are counted once a year in January by the US Department of Housing and Urban Development Continuum of Care Program.</span>
-<span class="sd">This dataframe lists the Continuum of Care regions listed by state and local governments and different factors regarding homelessness as their observations. The people collecting the data may use a census approach, sampling approach or a combination of the methods.</span>
-<span class="sd">This data is from November 2019 and is categorized by a bunch of diffrent columns such as whether or not a person is sheltered, discussing age, whether or not they have a family, and whether or not they are verterans.</span>
-<span class="sd">&quot;&quot;&quot;</span>
-
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;User-Agent&#39;</span><span class="p">:</span> <span class="s1">&#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36&#39;</span><span class="p">}</span> 
-<span class="c1">#hud2020 = pd.read_excel(r, sheet_name = 1)</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://www.huduser.gov/portal/sites/default/files/xls/2007-2020-PIT-Estimates-by-state.xlsx&quot;</span>
-
-<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
-
-<span class="c1">#df = pd.read_csv(io.StringIO(x.decode(&#39;utf8&#39;)))</span>
 </pre></div>
 
     </div>
@@ -13223,12 +13202,635 @@ The data sources listed on this website are particularly interesting because the
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="HUD-Homelessness-Report-(2020)">HUD Homelessness Report (2020)<a class="anchor-link" href="#HUD-Homelessness-Report-(2020)">&#182;</a></h3>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[189]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../HUD2020.csv&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#reading in a HUD csv file from Github</span>
+<span class="n">HUD2020</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./data/HUD2020.csv&quot;</span><span class="p">)</span>
+
+<span class="c1">#keeps most relevant columns</span>
+<span class="n">HUD2020</span> <span class="o">=</span> <span class="n">HUD2020</span><span class="p">[[</span><span class="s2">&quot;State&quot;</span><span class="p">,</span><span class="s2">&quot;Overall Homeless, 2020&quot;</span><span class="p">,</span><span class="s2">&quot;Overall Homeless - Under 18, 2020&quot;</span><span class="p">,</span> <span class="s2">&quot;Overall Homeless - Age 18 to 24, 2020&quot;</span><span class="p">,</span> <span class="s2">&quot;Overall Homeless - Over 24, 2020&quot;</span><span class="p">,</span> <span class="s2">&quot;Overall Homeless - Female, 2020&quot;</span><span class="p">,</span> <span class="s2">&quot;Overall Homeless - Male, 2020&quot;</span><span class="p">,</span> <span class="s2">&quot;Overall Homeless - Transgender, 2020&quot;</span><span class="p">,</span> <span class="s2">&quot;Overall Homeless - Gender Non-Conforming, 2020&quot;</span><span class="p">,</span><span class="s2">&quot;Overall Homeless - Hispanic/Latino, 2020&quot;</span><span class="p">,</span> <span class="s2">&quot;Overall Homeless - White, 2020&quot;</span><span class="p">,</span> <span class="s2">&quot;Overall Homeless - Black or African American, 2020&quot;</span><span class="p">,</span><span class="s2">&quot;Overall Homeless - Asian, 2020&quot;</span><span class="p">,</span> <span class="s2">&quot;Overall Homeless - American Indian or Alaska Native, 2020&quot;</span><span class="p">,</span> <span class="s2">&quot;Overall Homeless - Native Hawaiian or Other Pacific Islander, 2020&quot;</span><span class="p">,</span> <span class="s2">&quot;Overall Homeless - Multiple Races, 2020&quot;</span><span class="p">,]]</span>
+
+<span class="c1">#removes data from additional rows- only 50 states</span>
+<span class="n">HUD2020</span> <span class="o">=</span> <span class="n">HUD2020</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">27</span><span class="p">,</span><span class="mi">42</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">56</span><span class="p">,</span><span class="mi">57</span><span class="p">])</span>
+
+<span class="c1">#changes all state tickers to full names</span>
+<span class="n">HUD2020</span><span class="p">[</span><span class="s2">&quot;State&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">HUD2020</span><span class="p">[</span><span class="s2">&quot;State&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="s2">&quot;AK&quot;</span><span class="p">:</span><span class="s2">&quot;Alaska&quot;</span><span class="p">,</span> <span class="s2">&quot;AL&quot;</span><span class="p">:</span><span class="s2">&quot;Alabama&quot;</span><span class="p">,</span> <span class="s2">&quot;AR&quot;</span><span class="p">:</span> <span class="s2">&quot;Arkansas&quot;</span><span class="p">,</span> <span class="s2">&quot;AZ&quot;</span><span class="p">:</span> <span class="s2">&quot;Arizona&quot;</span><span class="p">,</span> <span class="s2">&quot;CA&quot;</span><span class="p">:</span><span class="s2">&quot;California&quot;</span><span class="p">,</span> <span class="s2">&quot;CO&quot;</span><span class="p">:</span><span class="s2">&quot;Colorado&quot;</span><span class="p">,</span> <span class="s2">&quot;CT&quot;</span><span class="p">:</span><span class="s2">&quot;Connecticut&quot;</span><span class="p">,</span> <span class="s2">&quot;DE&quot;</span><span class="p">:</span><span class="s2">&quot;Delaware&quot;</span><span class="p">,</span><span class="s2">&quot;FL&quot;</span><span class="p">:</span><span class="s2">&quot;Florida&quot;</span><span class="p">,</span> <span class="s2">&quot;GA&quot;</span><span class="p">:</span><span class="s2">&quot;Georgia&quot;</span><span class="p">,</span><span class="s2">&quot;HI&quot;</span><span class="p">:</span><span class="s2">&quot;Hawaii&quot;</span><span class="p">,</span><span class="s2">&quot;IA&quot;</span><span class="p">:</span><span class="s2">&quot;Iowa&quot;</span><span class="p">,</span><span class="s2">&quot;ID&quot;</span><span class="p">:</span><span class="s2">&quot;Idaho&quot;</span><span class="p">,</span><span class="s2">&quot;IL&quot;</span><span class="p">:</span><span class="s2">&quot;Illinois&quot;</span><span class="p">,</span><span class="s2">&quot;IN&quot;</span><span class="p">:</span><span class="s2">&quot;Indiana&quot;</span><span class="p">,</span><span class="s2">&quot;KS&quot;</span><span class="p">:</span><span class="s2">&quot;Kansas&quot;</span><span class="p">,</span><span class="s2">&quot;KY&quot;</span><span class="p">:</span><span class="s2">&quot;Kentucky&quot;</span><span class="p">,</span><span class="s2">&quot;LA&quot;</span><span class="p">:</span><span class="s2">&quot;Louisiana&quot;</span><span class="p">,</span><span class="s2">&quot;MA&quot;</span><span class="p">:</span><span class="s2">&quot;Massachusetts&quot;</span><span class="p">,</span><span class="s2">&quot;MD&quot;</span><span class="p">:</span><span class="s2">&quot;Maryland&quot;</span><span class="p">,</span><span class="s2">&quot;ME&quot;</span><span class="p">:</span><span class="s2">&quot;Maine&quot;</span><span class="p">,</span><span class="s2">&quot;MI&quot;</span><span class="p">:</span><span class="s2">&quot;Michigan&quot;</span><span class="p">,</span><span class="s2">&quot;MN&quot;</span><span class="p">:</span><span class="s2">&quot;Minnesota&quot;</span><span class="p">,</span> <span class="s2">&quot;MO&quot;</span><span class="p">:</span><span class="s2">&quot;Missouri&quot;</span><span class="p">,</span><span class="s2">&quot;MS&quot;</span><span class="p">:</span><span class="s2">&quot;Mississippi&quot;</span><span class="p">,</span><span class="s2">&quot;MT&quot;</span><span class="p">:</span><span class="s2">&quot;Montana&quot;</span><span class="p">,</span><span class="s2">&quot;NC&quot;</span><span class="p">:</span><span class="s2">&quot;North Carolina&quot;</span><span class="p">,</span> <span class="s2">&quot;ND&quot;</span><span class="p">:</span><span class="s2">&quot;North Dakota&quot;</span><span class="p">,</span><span class="s2">&quot;NE&quot;</span><span class="p">:</span><span class="s2">&quot;Nebraska&quot;</span><span class="p">,</span><span class="s2">&quot;NH&quot;</span><span class="p">:</span><span class="s2">&quot;New Hampshire&quot;</span><span class="p">,</span><span class="s2">&quot;NJ&quot;</span><span class="p">:</span><span class="s2">&quot;New Jersey&quot;</span><span class="p">,</span><span class="s2">&quot;NM&quot;</span><span class="p">:</span><span class="s2">&quot;New Mexico&quot;</span><span class="p">,</span><span class="s2">&quot;NV&quot;</span><span class="p">:</span><span class="s2">&quot;Nevada&quot;</span><span class="p">,</span><span class="s2">&quot;NY&quot;</span><span class="p">:</span><span class="s2">&quot;New York&quot;</span><span class="p">,</span><span class="s2">&quot;OH&quot;</span><span class="p">:</span><span class="s2">&quot;Ohio&quot;</span><span class="p">,</span><span class="s2">&quot;OK&quot;</span><span class="p">:</span><span class="s2">&quot;Oklahoma&quot;</span><span class="p">,</span><span class="s2">&quot;OR&quot;</span><span class="p">:</span><span class="s2">&quot;Oregon&quot;</span><span class="p">,</span><span class="s2">&quot;PA&quot;</span><span class="p">:</span><span class="s2">&quot;Pennsylvania&quot;</span><span class="p">,</span><span class="s2">&quot;RI&quot;</span><span class="p">:</span><span class="s2">&quot;Rhode Island&quot;</span><span class="p">,</span><span class="s2">&quot;SC&quot;</span><span class="p">:</span><span class="s2">&quot;South Carolina&quot;</span><span class="p">,</span><span class="s2">&quot;SD&quot;</span><span class="p">:</span><span class="s2">&quot;South Dakota&quot;</span><span class="p">,</span><span class="s2">&quot;TN&quot;</span><span class="p">:</span><span class="s2">&quot;Tennessee&quot;</span><span class="p">,</span><span class="s2">&quot;TX&quot;</span><span class="p">:</span><span class="s2">&quot;Texas&quot;</span><span class="p">,</span><span class="s2">&quot;UT&quot;</span><span class="p">:</span><span class="s2">&quot;Utah&quot;</span><span class="p">,</span><span class="s2">&quot;VA&quot;</span><span class="p">:</span><span class="s2">&quot;Virginia&quot;</span><span class="p">,</span><span class="s2">&quot;VT&quot;</span><span class="p">:</span><span class="s2">&quot;Vermont&quot;</span><span class="p">,</span><span class="s2">&quot;WA&quot;</span><span class="p">:</span><span class="s2">&quot;Washington&quot;</span><span class="p">,</span><span class="s2">&quot;WI&quot;</span><span class="p">:</span><span class="s2">&quot;Wisconsin&quot;</span><span class="p">,</span><span class="s2">&quot;WV&quot;</span><span class="p">:</span><span class="s2">&quot;West Virginia&quot;</span><span class="p">,</span><span class="s2">&quot;WY&quot;</span><span class="p">:</span><span class="s2">&quot;Wyoming&quot;</span><span class="p">})</span>
+
+<span class="n">HUD2020</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[189]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>State</th>
+      <th>Overall Homeless, 2020</th>
+      <th>Overall Homeless - Under 18, 2020</th>
+      <th>Overall Homeless - Age 18 to 24, 2020</th>
+      <th>Overall Homeless - Over 24, 2020</th>
+      <th>Overall Homeless - Female, 2020</th>
+      <th>Overall Homeless - Male, 2020</th>
+      <th>Overall Homeless - Transgender, 2020</th>
+      <th>Overall Homeless - Gender Non-Conforming, 2020</th>
+      <th>Overall Homeless - Hispanic/Latino, 2020</th>
+      <th>Overall Homeless - White, 2020</th>
+      <th>Overall Homeless - Black or African American, 2020</th>
+      <th>Overall Homeless - Asian, 2020</th>
+      <th>Overall Homeless - American Indian or Alaska Native, 2020</th>
+      <th>Overall Homeless - Native Hawaiian or Other Pacific Islander, 2020</th>
+      <th>Overall Homeless - Multiple Races, 2020</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Alaska</td>
+      <td>1949</td>
+      <td>326</td>
+      <td>197</td>
+      <td>1426</td>
+      <td>828</td>
+      <td>1114</td>
+      <td>3</td>
+      <td>4</td>
+      <td>126</td>
+      <td>634</td>
+      <td>137</td>
+      <td>22</td>
+      <td>890</td>
+      <td>40</td>
+      <td>226</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Alabama</td>
+      <td>3351</td>
+      <td>528</td>
+      <td>198</td>
+      <td>2625</td>
+      <td>1294</td>
+      <td>1988</td>
+      <td>9</td>
+      <td>4</td>
+      <td>126</td>
+      <td>1462</td>
+      <td>1755</td>
+      <td>2</td>
+      <td>37</td>
+      <td>11</td>
+      <td>73</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Arkansas</td>
+      <td>2366</td>
+      <td>195</td>
+      <td>258</td>
+      <td>1913</td>
+      <td>798</td>
+      <td>1561</td>
+      <td>5</td>
+      <td>2</td>
+      <td>53</td>
+      <td>1353</td>
+      <td>901</td>
+      <td>4</td>
+      <td>42</td>
+      <td>21</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Arizona</td>
+      <td>10979</td>
+      <td>1722</td>
+      <td>824</td>
+      <td>8433</td>
+      <td>4228</td>
+      <td>6694</td>
+      <td>43</td>
+      <td>14</td>
+      <td>2355</td>
+      <td>6901</td>
+      <td>2289</td>
+      <td>77</td>
+      <td>1027</td>
+      <td>60</td>
+      <td>625</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>California</td>
+      <td>161548</td>
+      <td>16141</td>
+      <td>13391</td>
+      <td>132016</td>
+      <td>53505</td>
+      <td>105737</td>
+      <td>1601</td>
+      <td>705</td>
+      <td>51966</td>
+      <td>87439</td>
+      <td>49610</td>
+      <td>3240</td>
+      <td>6386</td>
+      <td>1784</td>
+      <td>13089</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This table has a row for each state in the US and has a column for different homeles statistics including total people and by categories including age, gender, and race. We cleaned this table to only include the most relevent columns.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Minimum-Wage-By-State-(2021)">Minimum Wage By State (2021)<a class="anchor-link" href="#Minimum-Wage-By-State-(2021)">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[190]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Data found for minimum wage by state</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://minimumwage.com/in-your-state/&quot;</span><span class="p">)</span>
+<span class="c1">#parse</span>
+<span class="n">root</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+<span class="c1">#find table to make df</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;table&quot;</span><span class="p">)</span>
+<span class="c1">#read html table as df</span>
+<span class="n">wages</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">table</span><span class="p">))</span>
+<span class="c1">#clean</span>
+<span class="n">wages</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">wages</span><span class="p">)</span>
+<span class="c1">#drop all columns except state and wage</span>
+<span class="n">wages</span> <span class="o">=</span> <span class="n">wages</span><span class="p">[[</span><span class="s2">&quot;State&quot;</span><span class="p">,</span><span class="s2">&quot;Minimum Wage&quot;</span><span class="p">]]</span>
+
+<span class="c1">#cleans data</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">wages</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="n">wages</span><span class="p">[</span><span class="s2">&quot;Minimum Wage&quot;</span><span class="p">][</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">wages</span><span class="p">[</span><span class="s2">&quot;Minimum Wage&quot;</span><span class="p">][</span><span class="n">key</span><span class="p">])[</span><span class="mi">1</span><span class="p">:]</span>
+    
+<span class="n">wages</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[190]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>State</th>
+      <th>Minimum Wage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Alabama</td>
+      <td>7.25</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Alaska</td>
+      <td>10.34</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Arizona</td>
+      <td>12.15</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Arkansas</td>
+      <td>11.00</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>California</td>
+      <td>14.00</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>DataFrame of 50 rows (each state) and two columns (State and Minimum Wage). The Federal Minimum Wage is $7.25. Any higher wages was set by the state, potentially impacting rate of homelessness. This data was cleaned by removing the dollar sign from the wage value.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Electoral-College-Results-By-State-(1980-2020)">Electoral College Results By State (1980-2020)<a class="anchor-link" href="#Electoral-College-Results-By-State-(1980-2020)">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[191]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#data for which party each state voted for in presidential elections </span>
+<span class="n">r1</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://en.wikipedia.org/wiki/List_of_United_States_presidential_election_results_by_state&quot;</span><span class="p">)</span>
+<span class="c1">#parse</span>
+<span class="n">root1</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r1</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+<span class="c1">#find table</span>
+<span class="n">table1</span> <span class="o">=</span> <span class="n">root1</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;table&quot;</span><span class="p">)</span>
+<span class="c1">#read as table</span>
+<span class="n">votes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">table1</span><span class="p">))</span>
+<span class="n">votes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">votes</span><span class="p">)</span>
+<span class="c1">#remove nans at end</span>
+<span class="n">votes</span> <span class="o">=</span> <span class="n">votes</span><span class="p">[:</span><span class="mi">54</span><span class="p">]</span>
+<span class="c1">#clean year data</span>
+<span class="n">votes</span><span class="p">[</span><span class="mi">59</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2000</span>
+<span class="n">votes</span><span class="p">[</span><span class="mi">64</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2016</span>
+<span class="c1">#cut data down to range from 1980-2020 elections</span>
+<span class="n">votes</span> <span class="o">=</span> <span class="n">votes</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">54</span><span class="p">,</span><span class="mi">55</span><span class="p">,</span><span class="mi">56</span><span class="p">,</span><span class="mi">57</span><span class="p">,</span><span class="mi">58</span><span class="p">,</span><span class="mi">59</span><span class="p">,</span><span class="mi">61</span><span class="p">,</span><span class="mi">62</span><span class="p">,</span><span class="mi">63</span><span class="p">,</span><span class="mi">64</span><span class="p">,</span><span class="mi">65</span><span class="p">]]</span>
+<span class="c1">#clean - set years to column values</span>
+<span class="k">for</span> <span class="n">columns</span> <span class="ow">in</span> <span class="n">votes</span><span class="p">:</span>
+    <span class="n">votes</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="n">columns</span><span class="p">:</span><span class="n">votes</span><span class="p">[</span><span class="n">columns</span><span class="p">][</span><span class="mi">0</span><span class="p">]},</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s2">&quot;columns&quot;</span><span class="p">)</span>
+<span class="c1">#removes non state rows</span>
+<span class="n">votes</span> <span class="o">=</span> <span class="n">votes</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span><span class="mi">53</span><span class="p">])</span>
+<span class="n">votes</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[191]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>State</th>
+      <th>1980</th>
+      <th>1984</th>
+      <th>1988</th>
+      <th>1992</th>
+      <th>1996</th>
+      <th>2000</th>
+      <th>2004</th>
+      <th>2008</th>
+      <th>2012</th>
+      <th>2016</th>
+      <th>2020</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>Alabama</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Alaska</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Arizona</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>D</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>D</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Arkansas</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>D</td>
+      <td>D</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>California</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>D</td>
+      <td>D</td>
+      <td>D</td>
+      <td>D</td>
+      <td>D</td>
+      <td>D</td>
+      <td>D</td>
+      <td>D</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Each state is tabled with their Presidential Electoral votes since 1980. This data was found on Wikipedia and can be used great for time charts. We will look to see if the values from this chart have a measurable impact on a states homeless population. It can also be mapped on a national level. We cleaned the table up and removed non state rows. We believe the 40 year timeline begining in 1980 is measurable range of values.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Average-Temperature-By-State-(2019)">Average Temperature By State (2019)<a class="anchor-link" href="#Average-Temperature-By-State-(2019)">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[192]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#data for average 2019 temperature by state - came pre organized in descending order</span>
+<span class="n">r2</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://worldpopulationreview.com/state-rankings/average-temperatures-by-state&quot;</span><span class="p">)</span>
+<span class="c1">#parse</span>
+<span class="n">root2</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r2</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+<span class="n">table2</span> <span class="o">=</span> <span class="n">root2</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;table&quot;</span><span class="p">)</span>
+<span class="c1">#make df</span>
+<span class="n">temps</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">table2</span><span class="p">))</span>
+<span class="n">temps</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">temps</span><span class="p">)</span>
+<span class="n">temps</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[192]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>State</th>
+      <th>Average Temperature</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Florida</td>
+      <td>70.7</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Hawaii</td>
+      <td>70.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Louisiana</td>
+      <td>66.4</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Texas</td>
+      <td>64.8</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Georgia</td>
+      <td>63.5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This table shows the states average temperature during 2019 measured in Farrenheit. We will map this table to the homeless df to predict homeless population by temperature.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Data-Merging">Data Merging<a class="anchor-link" href="#Data-Merging">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If you noticed above, all the data was cleaned so that each dataframe has 50 rows, one for each state, named accordingly. By cleaning our data, we made merging table much easier. In this section we will combine all of our tables into one.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[194]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#combines wages and temperatures by states</span>
+<span class="n">temp_wages</span> <span class="o">=</span> <span class="n">temps</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">wages</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span> <span class="s2">&quot;State&quot;</span><span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="s2">&quot;outer&quot;</span><span class="p">)</span>
+<span class="c1">#combines previous table with election results</span>
+<span class="n">elections_temp_wages</span> <span class="o">=</span> <span class="n">temp_wages</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">votes</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;State&quot;</span><span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="s2">&quot;outer&quot;</span><span class="p">)</span>
+<span class="c1">#Sorry DC and Puerto Rico</span>
+<span class="n">elections_temp_wages</span> <span class="o">=</span> <span class="n">states</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+
+<span class="c1">#Complete DataFrame with homeless stats</span>
+<span class="n">df2020</span> <span class="o">=</span> <span class="n">elections_temp_wages</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">HUD2020</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;State&quot;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;outer&quot;</span><span class="p">)</span>
+
+<span class="c1">#cast column variable types</span>
+<span class="n">df2020</span><span class="p">[</span><span class="s2">&quot;Average Temperature&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df2020</span><span class="p">[</span><span class="s2">&quot;Average Temperature&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">df2020</span><span class="p">[</span><span class="s2">&quot;Overall Homeless, 2020&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df2020</span><span class="p">[</span><span class="s2">&quot;Overall Homeless, 2020&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+<span class="c1">#cleans data</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">df2020</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="n">df2020</span><span class="p">[</span><span class="s2">&quot;Minimum Wage&quot;</span><span class="p">][</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">df2020</span><span class="p">[</span><span class="s2">&quot;Minimum Wage&quot;</span><span class="p">][</span><span class="n">key</span><span class="p">])[</span><span class="mi">1</span><span class="p">:]</span>
+    
+<span class="n">df2020</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -13244,15 +13846,933 @@ The data sources listed on this website are particularly interesting because the
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-2-63e78c95c234&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>pd<span class="ansi-blue-fg">.</span>read_csv<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;../HUD2020.csv&#34;</span><span class="ansi-blue-fg">)</span>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/ipykernel_launcher.py:17: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
 
-<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined</pre>
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+</pre>
 </div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[194]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>State</th>
+      <th>Average Temperature</th>
+      <th>Minimum Wage</th>
+      <th>1980</th>
+      <th>1984</th>
+      <th>1988</th>
+      <th>1992</th>
+      <th>1996</th>
+      <th>2000</th>
+      <th>2004</th>
+      <th>...</th>
+      <th>Overall Homeless - Male, 2020</th>
+      <th>Overall Homeless - Transgender, 2020</th>
+      <th>Overall Homeless - Gender Non-Conforming, 2020</th>
+      <th>Overall Homeless - Hispanic/Latino, 2020</th>
+      <th>Overall Homeless - White, 2020</th>
+      <th>Overall Homeless - Black or African American, 2020</th>
+      <th>Overall Homeless - Asian, 2020</th>
+      <th>Overall Homeless - American Indian or Alaska Native, 2020</th>
+      <th>Overall Homeless - Native Hawaiian or Other Pacific Islander, 2020</th>
+      <th>Overall Homeless - Multiple Races, 2020</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Florida</td>
+      <td>70.7</td>
+      <td>8.65</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>D</td>
+      <td>R</td>
+      <td>R</td>
+      <td>...</td>
+      <td>17670</td>
+      <td>52</td>
+      <td>22</td>
+      <td>4045</td>
+      <td>15102</td>
+      <td>11042</td>
+      <td>128</td>
+      <td>328</td>
+      <td>73</td>
+      <td>814</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Hawaii</td>
+      <td>70.0</td>
+      <td>10.10</td>
+      <td>D</td>
+      <td>R</td>
+      <td>D</td>
+      <td>D</td>
+      <td>D</td>
+      <td>D</td>
+      <td>D</td>
+      <td>...</td>
+      <td>3874</td>
+      <td>36</td>
+      <td>27</td>
+      <td>935</td>
+      <td>1469</td>
+      <td>295</td>
+      <td>564</td>
+      <td>83</td>
+      <td>2160</td>
+      <td>1887</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Louisiana</td>
+      <td>66.4</td>
+      <td>7.25</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>D</td>
+      <td>D</td>
+      <td>R</td>
+      <td>R</td>
+      <td>...</td>
+      <td>2192</td>
+      <td>11</td>
+      <td>3</td>
+      <td>88</td>
+      <td>1165</td>
+      <td>1908</td>
+      <td>21</td>
+      <td>29</td>
+      <td>5</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Texas</td>
+      <td>64.8</td>
+      <td>7.25</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>...</td>
+      <td>17067</td>
+      <td>61</td>
+      <td>21</td>
+      <td>7545</td>
+      <td>15778</td>
+      <td>10001</td>
+      <td>206</td>
+      <td>346</td>
+      <td>89</td>
+      <td>809</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Georgia</td>
+      <td>63.5</td>
+      <td>7.25</td>
+      <td>D</td>
+      <td>R</td>
+      <td>R</td>
+      <td>D</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>...</td>
+      <td>6340</td>
+      <td>44</td>
+      <td>107</td>
+      <td>520</td>
+      <td>3031</td>
+      <td>6708</td>
+      <td>92</td>
+      <td>64</td>
+      <td>21</td>
+      <td>318</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 29 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Analysis-Part-1:--National-Observations">Analysis Part 1:  National Observations<a class="anchor-link" href="#Analysis-Part-1:--National-Observations">&#182;</a></h1><h2 id="Summary-Statistics">Summary Statistics<a class="anchor-link" href="#Summary-Statistics">&#182;</a></h2><h3 id="Sum">Sum<a class="anchor-link" href="#Sum">&#182;</a></h3><p>The United States has 569,334 homeless people</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[195]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2020</span><span class="p">[</span><span class="s2">&quot;Overall Homeless, 2020&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[195]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>569334</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Mean">Mean<a class="anchor-link" href="#Mean">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Average-Of-Averages">Average Of Averages<a class="anchor-link" href="#Average-Of-Averages">&#182;</a></h4><p>Average State has ~11,386 homeless people</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[196]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2020</span><span class="p">[</span><span class="s2">&quot;Overall Homeless, 2020&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[196]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>11386.68</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Outliers">Outliers<a class="anchor-link" href="#Outliers">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Max">Max<a class="anchor-link" href="#Max">&#182;</a></h4><p>California has the highest homeless population at 161548 people</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[197]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2020</span><span class="p">[</span><span class="s2">&quot;Overall Homeless, 2020&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[197]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>161548</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[198]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2020</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df2020</span><span class="p">[</span><span class="s2">&quot;Overall Homeless, 2020&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[198]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>State    California
+Name: 11, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Min">Min<a class="anchor-link" href="#Min">&#182;</a></h4><p>North Dakota has the lowest homeless population at 541 people</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[199]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2020</span><span class="p">[</span><span class="s2">&quot;Overall Homeless, 2020&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[199]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>541</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[200]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2020</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df2020</span><span class="p">[</span><span class="s2">&quot;Overall Homeless, 2020&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmin</span><span class="p">()]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[200]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>State    North Dakota
+Name: 48, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Spread">Spread<a class="anchor-link" href="#Spread">&#182;</a></h3><p>The standard deviation of homelessness in the US is 25,559 - this is extremely disbursed data.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[201]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2020</span><span class="p">[</span><span class="s2">&quot;Overall Homeless, 2020&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[201]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>25559.470407818764</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Demographic-Distribution">Demographic Distribution<a class="anchor-link" href="#Demographic-Distribution">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Bar chart of national homeless by gender. More homeless men than women.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[202]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">genders</span> <span class="o">=</span> <span class="n">df2020</span><span class="p">[[</span><span class="s2">&quot;State&quot;</span><span class="p">,</span><span class="s2">&quot;Overall Homeless - Female, 2020&quot;</span><span class="p">,</span> <span class="s2">&quot;Overall Homeless - Male, 2020&quot;</span><span class="p">,</span> <span class="s2">&quot;Overall Homeless - Transgender, 2020&quot;</span><span class="p">,</span> <span class="s2">&quot;Overall Homeless - Gender Non-Conforming, 2020&quot;</span><span class="p">]]</span>
+<span class="n">genders</span> <span class="o">=</span> <span class="n">genders</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;State&quot;</span><span class="p">)</span>
+<span class="n">genders</span> <span class="o">=</span> <span class="n">genders</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+<span class="n">female</span> <span class="o">=</span> <span class="n">genders</span><span class="p">[</span><span class="s2">&quot;Overall Homeless - Female, 2020&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">male</span> <span class="o">=</span> <span class="n">genders</span><span class="p">[</span><span class="s2">&quot;Overall Homeless - Male, 2020&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">other</span> <span class="o">=</span> <span class="n">genders</span><span class="p">[</span><span class="s2">&quot;Overall Homeless - Transgender, 2020&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">+</span> <span class="n">genders</span><span class="p">[</span><span class="s2">&quot;Overall Homeless - Gender Non-Conforming, 2020&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="n">gendersums</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">({</span><span class="s2">&quot;Female&quot;</span><span class="p">:</span><span class="n">female</span><span class="p">,</span><span class="s2">&quot;Male&quot;</span><span class="p">:</span><span class="n">male</span><span class="p">,</span><span class="s2">&quot;Other&quot;</span><span class="p">:</span><span class="n">other</span><span class="p">},</span><span class="n">orient</span><span class="o">=</span><span class="s1">&#39;index&#39;</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Total Homeless&quot;</span><span class="p">])</span>
+<span class="n">gendersums</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[202]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;AxesSubplot:&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYkAAAESCAYAAAAIfCk9AAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjMuNCwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy8QVMy6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAc70lEQVR4nO3df5RU5Z3n8feHX0IiCmKPMcAEElsNikBsAdd1IjJqa5LFuOpqzIjGDYk/EkgmOTHZ2cWoZOQcRx03BkNGAnjYGHWSkY0YhoPM5rhZkTYQfvmDFjE0QWUARScDCH73j3rQoq2nu/hV1UV/XufU6Xu/97n3PkVrffre+9xbigjMzMxK6VLtDpiZWcflkDAzsyyHhJmZZTkkzMwsyyFhZmZZ3ardgYPt2GOPjUGDBlW7G2ZmNeXZZ5/914ioa10/7EJi0KBBNDU1VbsbZmY1RdIrpeo+3WRmZlkOCTMzy3JImJlZVrvXJCT1BH4DHJHaPxoRkyXNBD4NvJmaXhMRyyQJ+HvgIuBPqf67tK3xwN+k9rdHxKxUPx2YCfQC5gETIyIkHQP8HBgErAMuj4itB/iezewgeOedd2hpaWH79u3V7ortg549ezJgwAC6d+9eVvtyLlzvAM6NiLcldQeekvREWvbtiHi0VfsLgfr0GgVMA0alD/zJQAMQwLOS5qYP/WnAl4HFFEKiEXgCuBlYGBF3SLo5zX+nrHdmZodUS0sLvXv3ZtCgQRT+NrSOLiLYvHkzLS0tDB48uKx12j3dFAVvp9nu6dXWUwHHAbPTek8DfSQdD1wALIiILSkYFgCNadlREfF0FJ42OBu4uGhbs9L0rKK6mVXZ9u3b6devnwOihkiiX79++3T0V9Y1CUldJS0DXqfwQb84LZoiabmkuyUdkWr9gfVFq7ekWlv1lhJ1gOMiYmOafhU4LtO/CZKaJDVt2rSpnLdkZgeBA6L27OvvrKyQiIjdETEcGACMlHQq8F3gZOAM4BgO8WmgdJRR8ggmIqZHRENENNTVfeBeEDMz20/7dDNdRLwhaRHQGBF3pvIOST8FvpXmNwADi1YbkGobgHNa1f8l1QeUaA/wmqTjI2JjOi31+r7018wqZ9DNjx/U7a274zNtLt+8eTNjx44F4NVXX6Vr167s+SPxmWeeoUePHu+1veeee5gwYQIf+tCH2tzmOeecw5133klDQ0Ob9XXr1vHZz36WlStX7vP7Ktctt9zCkUceybe+9a32Gx9C5YxuqgPeSQHRCzgPmFr04S0K1wr2/GvNBW6S9BCFC9dvpnbzgR9I6pvanQ98NyK2SNomaTSFC9dXA/+zaFvjgTvSz8cOwns2Aw7+h1pH096HbK3r168fy5YtA9r/QL3nnnv44he/2G5I2AeVc7rpeGCRpOXAEgrXJH4FzJG0AlgBHAvcntrPA9YCzcBPgBsAImILcFvaxhLg1lQjtfmHtM5LFEY2QSEczpO0BvjLNG9mVtLChQsZMWIEQ4cO5Utf+hI7duzg3nvv5Y9//CNjxoxhzJgxAFx//fU0NDRwyimnMHny5APa5/bt27n22msZOnQoI0aMYNGiRQDMnDmTiy++mPPOO49Bgwbxwx/+kLvuuosRI0YwevRotmwpfPy99NJLNDY2cvrpp3P22Wfz/PPPf2AfuTaPPPIIp556KsOGDeMv/uIvAFi1ahUjR45k+PDhnHbaaaxZs+aA3l+7RxIRsRwYUaJ+bqZ9ADdmls0AZpSoNwGnlqhvBsa210czs+3bt3PNNdewcOFCTjzxRK6++mqmTZvGpEmTuOuuu1i0aBHHHnssAFOmTOGYY45h9+7djB07luXLl3Paaae1uf2rrrqKXr16AbBz5066dCn8jX3fffchiRUrVvD8889z/vnn8+KLLwKwcuVKli5dyvbt2znhhBOYOnUqS5cu5Rvf+AazZ89m0qRJTJgwgfvvv5/6+noWL17MDTfcwJNPPrnXvnNtbr31VubPn0///v154403ALj//vuZOHEiV111FTt37mT37t0H9O962D3gz8w6p927dzN48GBOPPFEAMaPH899993HpEmTPtD24YcfZvr06ezatYuNGzeyevXqdkNizpw5H7gmAfDUU0/xta99DYCTTz6Zj33sY++FxJgxY+jduze9e/fm6KOP5nOf+xwAQ4cOZfny5bz99tv89re/5bLLLntvPzt27Nhrv221Oeuss7jmmmu4/PLLueSSSwA488wzmTJlCi0tLVxyySXU19eX9w+Y4ZAws07l5Zdf5s4772TJkiX07duXa6655pDdNX7EEUe8N92lS5f35rt06cKuXbt499136dOnz3vXVkppq83999/P4sWLefzxxzn99NN59tln+cIXvsCoUaN4/PHHueiii/jxj3/MueeW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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Analysis-Part-2:-Regional-Impacts">Analysis Part 2: Regional Impacts<a class="anchor-link" href="#Analysis-Part-2:-Regional-Impacts">&#182;</a></h1><h2 id="Louisiana-Findings">Louisiana Findings<a class="anchor-link" href="#Louisiana-Findings">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[203]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">louisiana</span> <span class="o">=</span> <span class="n">df2020</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">louisiana</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[203]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>State</th>
+      <th>Average Temperature</th>
+      <th>Minimum Wage</th>
+      <th>1980</th>
+      <th>1984</th>
+      <th>1988</th>
+      <th>1992</th>
+      <th>1996</th>
+      <th>2000</th>
+      <th>2004</th>
+      <th>...</th>
+      <th>Overall Homeless - Male, 2020</th>
+      <th>Overall Homeless - Transgender, 2020</th>
+      <th>Overall Homeless - Gender Non-Conforming, 2020</th>
+      <th>Overall Homeless - Hispanic/Latino, 2020</th>
+      <th>Overall Homeless - White, 2020</th>
+      <th>Overall Homeless - Black or African American, 2020</th>
+      <th>Overall Homeless - Asian, 2020</th>
+      <th>Overall Homeless - American Indian or Alaska Native, 2020</th>
+      <th>Overall Homeless - Native Hawaiian or Other Pacific Islander, 2020</th>
+      <th>Overall Homeless - Multiple Races, 2020</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2</th>
+      <td>Louisiana</td>
+      <td>66.4</td>
+      <td>7.25</td>
+      <td>R</td>
+      <td>R</td>
+      <td>R</td>
+      <td>D</td>
+      <td>D</td>
+      <td>R</td>
+      <td>R</td>
+      <td>...</td>
+      <td>2192</td>
+      <td>11</td>
+      <td>3</td>
+      <td>88</td>
+      <td>1165</td>
+      <td>1908</td>
+      <td>21</td>
+      <td>29</td>
+      <td>5</td>
+      <td>45</td>
+    </tr>
+  </tbody>
+</table>
+<p>1 rows × 29 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Homeless-By-State-Temperature">Homeless By State Temperature<a class="anchor-link" href="#Homeless-By-State-Temperature">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[204]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">homeless_temp</span> <span class="o">=</span> <span class="n">df2020</span><span class="p">[[</span><span class="s2">&quot;Average Temperature&quot;</span><span class="p">,</span><span class="s2">&quot;Overall Homeless, 2020&quot;</span><span class="p">]]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Weak Positive Correlation</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[205]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">homeless_temp</span><span class="p">[</span><span class="s2">&quot;Average Temperature&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">homeless_temp</span><span class="p">[</span><span class="s2">&quot;Overall Homeless, 2020&quot;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[205]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.13355500230412334</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[206]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">homeless_temp</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;Average Temperature&quot;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;Overall Homeless, 2020&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;blue&quot;</span><span class="p">)</span>
+<span class="n">louisiana</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;Average Temperature&quot;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;Overall Homeless, 2020&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[206]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;AxesSubplot:xlabel=&#39;Average Temperature&#39;, ylabel=&#39;Overall Homeless, 2020&#39;&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Red is Louisiana</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Homeless-By-State-Minimum-Wage">Homeless By State Minimum Wage<a class="anchor-link" href="#Homeless-By-State-Minimum-Wage">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[213]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">homeless_wage</span> <span class="o">=</span> <span class="n">df2020</span><span class="p">[[</span><span class="s2">&quot;Minimum Wage&quot;</span><span class="p">,</span><span class="s2">&quot;Overall Homeless, 2020&quot;</span><span class="p">]]</span>
+<span class="n">homeless_wage</span><span class="p">[</span><span class="s2">&quot;Minimum Wage&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">homeless_wage</span><span class="p">[</span><span class="s2">&quot;Minimum Wage&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">homeless_wage</span><span class="p">[</span><span class="s2">&quot;Overall Homeless, 2020&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">homeless_wage</span><span class="p">[</span><span class="s2">&quot;Overall Homeless, 2020&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/ipykernel_launcher.py:2: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/ipykernel_launcher.py:3: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  This is separate from the ipykernel package so we can avoid doing imports until
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Any idea how to remove the error messages above?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Moderate Positive Correlation</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[211]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">homeless_wage</span><span class="p">[</span><span class="s2">&quot;Minimum Wage&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">homeless_wage</span><span class="p">[</span><span class="s2">&quot;Overall Homeless, 2020&quot;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[211]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.4141571132926049</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Scatter Chart</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[221]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ax1</span> <span class="o">=</span> <span class="n">homeless_wage</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;Minimum Wage&quot;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;Overall Homeless, 2020&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;blue&quot;</span><span class="p">)</span>
+<span class="n">louisiana</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;Minimum Wage&quot;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;Overall Homeless, 2020&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">ax</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[221]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;AxesSubplot:xlabel=&#39;Minimum Wage&#39;, ylabel=&#39;Overall Homeless, 2020&#39;&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
 </div>
 
 </div>
@@ -13264,7 +14784,48 @@ The data sources listed on this website are particularly interesting because the
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Analysis-Part-3:-Future-Predictions">Analysis Part 3: Future Predictions<a class="anchor-link" href="#Analysis-Part-3:-Future-Predictions">&#182;</a></h1><p>See Next Steps Below</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Next-Steps">Next Steps<a class="anchor-link" href="#Next-Steps">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li><p>Part 3 of our analysis is to create a predictive model to forecast the homeless population in 2021 and future years. We will create a linear regression model using homeless data over the last 40 years and regress it with the most correlated factors.</p>
+</li>
+<li><p>More charts and visuals will help analyze and present the findings and correlations between states, homeless population, and other factors. This will show which factors are the most correlated with state homelessness data. We will then present our findings and reccomendations in order to reduce homelessness.</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>
